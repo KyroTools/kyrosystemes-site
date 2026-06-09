@@ -1,0 +1,155 @@
+    #van-power-simulator {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    #van-power-simulator * {
+      box-sizing: border-box;
+    }
+
+    .vps-card {
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 20px;
+      background: #fff;
+    }
+
+    .vps-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .vps-subtitle {
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .vps-table-wrapper {
+      overflow-x: auto;
+    }
+
+    .vps-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+
+    .vps-table th,
+    .vps-table td {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .vps-table th:first-child,
+    .vps-table td:first-child {
+      text-align: left;
+    }
+
+    .vps-table input {
+      width: 80px;
+      padding: 6px;
+    }
+
+    .vps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .vps-field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .vps-field select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .vps-btn {
+      margin-top: 24px;
+      padding: 14px 22px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #1f4b7a;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .vps-btn:hover {
+      background: #17395c;
+    }
+
+    .vps-results {
+      display: none;
+    }
+
+    .vps-result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .vps-metric {
+      border: 1px solid #d9d9d9;
+      border-radius: 8px;
+      padding: 18px;
+      background: #fafafa;
+    }
+
+    .vps-metric-title {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .vps-metric-value {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .vps-analysis {
+      background: #f7f9fb;
+      border-left: 4px solid #1f4b7a;
+      padding: 18px;
+      line-height: 1.7;
+      border-radius: 6px;
+    }
+
+    .vps-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+    .robust-low {
+      color: #c0392b;
+    }
+
+    .robust-medium {
+      color: #d68910;
+    }
+
+    .robust-good {
+      color: #1e8449;
+    }
+
+    @media (max-width: 768px) {
+      .vps-title {
+        font-size: 24px;
+      }
+    }
