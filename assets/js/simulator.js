@@ -265,4 +265,24 @@ function calculateVanSystem() {
   document.getElementById("results").scrollIntoView({
     behavior: "smooth"
   });
+
+  /*
+============================================
+Google Analytics
+============================================
+*/
+
+if (typeof gtag === "function") {
+
+    gtag("event", "simulation_calculated", {
+
+        simulator_type: "van_electrical",
+
+        battery_type: batteryType,
+
+        autonomy_days: autonomy
+
+    });
+
+}
 }
