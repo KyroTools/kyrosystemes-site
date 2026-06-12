@@ -3810,3 +3810,57 @@ input, select, textarea {
     line-height: 1.7;
     color: #444;
 }
+
+
+#feedback-section input[type="radio"],
+#feedback-section input[type="checkbox"] {
+    appearance: auto !important;
+    -webkit-appearance: auto !important;
+    -moz-appearance: auto !important;
+
+    opacity: 1 !important;
+    display: inline-block !important;
+    position: static !important;
+
+    float: none !important;
+    margin-right: 8px !important;
+    z-index: auto !important;
+}
+
+#feedback-section label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+#feedback-section input[type="text"],
+#feedback-section input[type="email"],
+#feedback-section textarea {
+
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    box-sizing: border-box;
+
+}
+
+#feedback-section textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#feedback-section input:focus,
+#feedback-section textarea:focus {
+
+    outline: none;
+    border-color: #1f4b7a;
+    box-shadow: 0 0 0 2px rgba(31, 75, 122, 0.15);
+
+}

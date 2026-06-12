@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    buildTable();
+  buildTable();
 
-    document
-        .getElementById("calculateBtn")
-        .addEventListener("click", calculateVanSystem);
+  document
+    .getElementById("calculateBtn")
+    .addEventListener("click", calculateVanSystem);
 
 });
 
@@ -262,6 +262,9 @@ function calculateVanSystem() {
   document.getElementById("results").style.display =
     "block";
 
+  document.getElementById("feedback-section").style.display =
+    "block";
+
   document.getElementById("results").scrollIntoView({
     behavior: "smooth"
   });
@@ -272,17 +275,155 @@ Google Analytics
 ============================================
 */
 
-if (typeof gtag === "function") {
+  if (typeof gtag === "function") {
 
     gtag("event", "simulation_calculated", {
 
-        simulator_type: "van_electrical",
+      simulator_type: "van_electrical",
 
-        battery_type: batteryType,
+      battery_type: batteryType,
 
-        autonomy_days: autonomy
+      autonomy_days: autonomy
+
+    });
+
+  }
+}
+
+document
+  .getElementById("feedbackForm")
+  .addEventListener("submit", submitFeedback);
+
+function submitFeedback(event) {
+
+  event.preventDefault();
+
+  const email = document.getElementById("q5").value.trim();
+
+  if (email !== "") {
+
+    const emailValid =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!emailValid) {
+
+      alert("Email invalide");
+
+      return;
+
+    }
+  }
+
+  const formUrl =
+    "https://docs.google.com/forms/d/e/1FAIpQLSemOclsY50AGrp1XqlXsYTYspm6lSAzh_IJLZwMxJkW7kQnyA/formResponse";
+
+  const formData = new FormData();
+
+  const useful =
+    document.querySelector(
+      'input[name="q1"]:checked'
+    )?.value || "";
+
+  formData.append(
+    "entry.1019787936",
+    useful
+  );
+
+  const selectedFeatures =
+    Array.from(
+      document.querySelectorAll(
+        'input[name="q2"]:checked'
+      )
+    )
+      .map(el => el.value)
+
+  if (
+    document.getElementById(
+      "feature_other_check"
+    ).checked
+  ) {
+    formData.append("entry.64429553.other_option_response", document.getElementById(
+      "feature_other_text"
+    ).value);
+
+  }
+
+  selectedFeatures.forEach(value => {
+    formData.append("entry.64429553", value);
+  });
+
+  formData.append(
+    "entry.971859063",
+    document.getElementById("q3").value
+  );
+
+  const status =
+    document.querySelector(
+      'input[name="q4"]:checked'
+    )?.value || "";
+
+  formData.append(
+    "entry.517472067",
+    status
+  );
+
+  formData.append(
+    "entry.1066571812",
+    document.getElementById("q5").value
+  );
+
+  fetch(formUrl, {
+
+    method: "POST",
+
+    mode: "no-cors",
+
+    body: formData
+
+  })
+    .then(() => {
+      const form =
+        document.getElementById("feedbackForm");
+
+      const success =
+        document.getElementById("feedbackSuccess");
+
+      form.style.display = "none";
+
+      success.style.display = "block";
+
+      if (typeof gtag === "function") {
+
+        gtag(
+          "event",
+          "feedback_submitted"
+        );
+
+      }
+
+      document
+        .getElementById("feedbackForm")
+        .reset();
+
+    })
+    .catch(() => {
+
+      document.getElementById(
+        "feedbackMessage"
+      ).innerHTML =
+        "Une erreur est survenue.";
 
     });
 
 }
-}
+
+document
+  .getElementById("feature_other_check")
+  .addEventListener("change", function () {
+
+    document.getElementById(
+      "feature_other_text"
+    ).style.display =
+      this.checked ? "block" : "none";
+
+  });
