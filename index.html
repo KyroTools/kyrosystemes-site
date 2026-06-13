@@ -50,8 +50,8 @@
 				<li><a href="#intro" class="active">Introduction</a></li>
 				<li><a href="#enjeux">Enjeux du dimensionnement</a></li>
 				<li><a href="#presentation-simulateur">Notre méthode</a></li>
-				<li><a href="#faq">FAQ</a></li>
 				<li><a href="#simulateur">Simulez!</a></li>
+				<li><a href="#faq">FAQ</a></li>
 			</ul>
 		</nav>
 
@@ -221,7 +221,6 @@
 								<tbody id="equipment-body"></tbody>
 							</table>
 						</div>
-
 						<div class="vps-grid">
 
 							<div class="vps-field">
@@ -243,7 +242,18 @@
 									<option value="winter">Hiver</option>
 								</select>
 							</div>
-
+							<div class="vps-field">
+								<label for="solarPower">
+									Panneaux solaires (Wc)
+								</label>
+								<!-- <input type="number" id="solarPower" min="0" step="10" placeholder="Ex : 200"> -->
+								 <select id="solarPower">
+									<option value="100">100Wc (petit panneau)</option>
+									<option value="200">200Wc (occupe environ 1/4 du toit)</option>
+									<option value="400">400Wc (occupe environ 1/2 du toit)</option>
+									<option value="500">500Wc (occupe environ 3/4 du toit)</option>
+								</select>
+							</div>
 							<div class="vps-field">
 								<label for="driving">Fréquence de roulage</label>
 								<select id="driving">
@@ -261,7 +271,6 @@
 									<option value="lead">Plomb</option>
 								</select>
 							</div>
-
 						</div>
 
 						<button id="calculateBtn" class="vps-btn">
@@ -271,7 +280,7 @@
 						<div class="vps-note">
 							Hypothèses : système 12 V, calcul simplifié sans prise en compte des
 							rendements MPPT, pertes de câbles, orientation des panneaux,
-							ombrages, convertisseur 230 V ou recharge alternateur.
+							ombrages, convertisseur 230 V.
 						</div>
 
 					</div>
@@ -283,15 +292,13 @@
 								<div class="vps-metric-title">Consommation journalière</div>
 								<div class="vps-metric-value" id="dailyWh">0 Wh</div>
 							</div>
-
+							<div class="vps-metric">
+								<div class="vps-metric-title">Production journalière</div>
+								<div class="vps-metric-value" id="production">0 Wc</div>
+							</div>
 							<div class="vps-metric">
 								<div class="vps-metric-title">Batterie recommandée</div>
 								<div class="vps-metric-value" id="batteryAh">0 Ah</div>
-							</div>
-
-							<div class="vps-metric">
-								<div class="vps-metric-title">Puissance solaire</div>
-								<div class="vps-metric-value" id="solarPower">0 Wc</div>
 							</div>
 
 							<div class="vps-metric">

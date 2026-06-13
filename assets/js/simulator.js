@@ -9,15 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const equipments = [
-  { id: "fridge", name: "Frigo à compression", power: 45 },
-  { id: "led", name: "Éclairage LED", power: 8 },
-  { id: "laptop", name: "Ordinateur portable", power: 60 },
-  { id: "screen", name: "Écran externe", power: 30 },
-  { id: "phone", name: "Téléphone", power: 10 },
-  { id: "starlink", name: "Routeur Starlink", power: 55 },
-  { id: "fan", name: "Ventilateur", power: 20 },
-  { id: "heater", name: "Chauffage diesel", power: 15 },
-  { id: "other", name: "Autres équipements", power: 100 }
+  { id: "fridge", name: "Frigo à compression", power: 45, hours: 5 },
+  { id: "led", name: "Éclairage LED", power: 10, hours: 3 },
+  { id: "laptop", name: "Ordinateur portable", power: 50, hours: 4 },
+  { id: "screen", name: "Écran externe", power: 30, hours: 4 },
+  { id: "phone", name: "Chargeur de téléphone", power: 15, hours: 2 },
+  { id: "starlink", name: "Routeur Starlink", power: 55, hours: 8 },
+  { id: "fan", name: "Ventilateur", power: 20, hours:4 },
+  { id: "heater", name: "Chauffage diesel", power: 25, hours: 8 },
+  { id: "water_pump", name: "Pompe à eau", power: 25, hours:1 },
+  { id: "electric_water_heater", name: "Chauffe-eau électrique (6L)", power: 200, hours:3 },
+  { id: "induction_cooker", name: "Plaque à induction (1000W)", power: 1000, hours:1 },
+  { id: "other", name: "Autres équipements", power: 100, hours:1 }
 ];
 
 const solarFactors = {
@@ -28,10 +31,10 @@ const solarFactors = {
 };
 
 const drivingFactors = {
-  daily: 0.70,
-  every2: 0.85,
-  occasional: 1.00,
-  stationary: 1.20
+  daily: 1, // 1h de conduite par jour
+  every2: 0.5, // 30min de conduite par jour
+  occasional: 0.25, // 15min/jour
+  stationary: 0.1 // très faible production en conduite
 };
 
 
@@ -58,7 +61,7 @@ function buildTable() {
           type="number"
           min="0"
           step="0.5"
-          value="${eq.id === 'fridge' ? 5 : 2}"
+          value="${eq.hours}"
           id="${eq.id}_hours">
       </td>
     `;
@@ -116,7 +119,7 @@ function calculateVanSystem() {
     totalWh * autonomy;
 
   const batteryAh =
-    Math.ceil(storageWh / (12 * dod));
+    Math.ceil(storageWh / (12 * dod*10)) * 10;
 
   /*
   ============================================
@@ -130,15 +133,24 @@ function calculateVanSystem() {
   const drivingFactor =
     drivingFactors[driving];
 
-  const solarPower =
+  /*const solarPower =
     Math.ceil(
       (totalWh / solarFactor) *
       drivingFactor /
       10
-    ) * 10;
+    ) * 10;*/
+   const solarEfficiency= 0.8;
+   const drivingEfficiency=0.8;
+    const solarPower =
+    document.getElementById("solarPower").value;
+
+  const estimatedSolarProduction =
+    solarPower * solarFactor *solarEfficiency;
+  
+  const estimatedDrivingProduction= 250 * drivingFactor * drivingEfficiency; 
 
   const estimatedProduction =
-    solarPower * solarFactor;
+    (estimatedSolarProduction + estimatedDrivingProduction) ;
 
   const ratio =
     estimatedProduction / totalWh;
@@ -246,8 +258,8 @@ function calculateVanSystem() {
   document.getElementById("batteryAh").textContent =
     batteryAh + " Ah";
 
-  document.getElementById("solarPower").textContent =
-    solarPower + " Wc";
+  document.getElementById("production").textContent =
+    estimatedProduction + " Wh";
 
   document.getElementById("robustness").textContent =
     robustness;
