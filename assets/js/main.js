@@ -152,3 +152,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+document.addEventListener("DOMContentLoaded", () => {
+
+  const btn = document.getElementById("navToggle");
+  const nav = document.getElementById("nav");
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+
+});
