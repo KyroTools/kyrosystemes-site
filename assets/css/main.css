@@ -3898,19 +3898,21 @@ input, select, textarea {
 
   background: white;
   border: 1px solid #ddd;
-  padding: 10px;
   list-style: none;
 
-  min-width: 200px;
+  min-width: 250px;
+  padding: 0;
   z-index: 999;
 }
 
 .dropdown-menu li {
-  padding: 6px 10px;
-  flex-shrink: 0;
+  padding: 0;
 }
 
 .dropdown-menu a {
+  display: block;
+  padding: 8px 12px;
+  width: 100%;
   white-space: nowrap;
 }
 

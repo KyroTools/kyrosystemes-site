@@ -56,11 +56,15 @@
 				<li><a href="#simulateur">Simulez!</a></li>
 				<li><a href="#faq">FAQ</a></li>
 				<li class="dropdown">
-						<a href="/guides/notions-electricite.html">Guides ▼</a>
-						<ul class="dropdown-menu">
-							<li><a href="/guides/notions-electricite.html">Bases de l'électricité en van aménagé</a></li>
-						</ul>
-					</li>
+					<a href="/guides/notions-electricite.html">Guides ▼</a>
+					<ul class="dropdown-menu">
+						<a href="/guides/notions-electricite.html" title="Bases de l'électricité en van aménagé">Bases
+							de l'électricité en van aménagé</a>
+						<a href="/guides/dimensionnement-electrique-van.html"
+							title="Comment dimensionner un système électrique de van aménagé">Comment dimensionner un
+							système électrique de van aménagé</a>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 
@@ -256,7 +260,7 @@
 									Panneaux solaires (Wc)
 								</label>
 								<!-- <input type="number" id="solarPower" min="0" step="10" placeholder="Ex : 200"> -->
-								 <select id="solarPower">
+								<select id="solarPower">
 									<option value="100">100Wc (petit panneau)</option>
 									<option value="200">200Wc (occupe environ 1/4 du toit)</option>
 									<option value="400">400Wc (occupe environ 1/2 du toit)</option>
@@ -289,8 +293,9 @@
 						<div class="vps-note">
 							Hypothèses : système 12 V, calcul simplifié sans prise en compte des
 							rendements liés à l'orientation des panneaux,
-							ombrages, convertisseur 230 V. La taille recommandée de la batterie ne prend pas 
-							encore en compte le courant maximal instantané demandé par les équipements de forte puissance (> 500W).
+							ombrages, convertisseur 230 V. La taille recommandée de la batterie ne prend pas
+							encore en compte le courant maximal instantané demandé par les équipements de forte
+							puissance (> 500W).
 						</div>
 
 					</div>
@@ -483,73 +488,77 @@
 				<h2>Questions fréquentes sur le simulateur électrique pour van aménagé</h2>
 
 				<div class="faq-item">
-				<!--	<h3 class="faq-question">Le simulateur est-il gratuit ?</h3>
+					<!--	<h3 class="faq-question">Le simulateur est-il gratuit ?</h3>
 					<p class="faq-answer">
 						Oui. Cette version est accessible librement et permet
 						d'obtenir une estimation préliminaire de votre installation.
 					</p>
 				</div> -->
 
-				<div class="faq-item">
-					<h3 class="faq-question">Le solaire suffit-il toute l'année ?</h3>
-					<p class="faq-answer">
-						Pas toujours. La saison, la météo et la fréquence des déplacements
-						ont un impact majeur sur l'énergie réellement disponible.
-					</p>
-				</div>
+					<div class="faq-item">
+						<h3 class="faq-question">Le solaire suffit-il toute l'année ?</h3>
+						<p class="faq-answer">
+							Pas toujours. La saison, la météo et la fréquence des déplacements
+							ont un impact majeur sur l'énergie réellement disponible.
+						</p>
+					</div>
 
-				<div class="faq-item">
-					<h3 class="faq-question">Quelle technologie de batterie est prise en compte ?</h3>
-					<p class="faq-answer">
-						Le simulateur calcule votre besoin énergétique, puis propose une capacité de batterie
-						en fonction de la technologie choisie (plomb, lithium, etc.), en tenant compte du taux de décharge admissible en fonction de la technologie.
-					</p>
-				</div>
+					<div class="faq-item">
+						<h3 class="faq-question">Quelle technologie de batterie est prise en compte ?</h3>
+						<p class="faq-answer">
+							Le simulateur calcule votre besoin énergétique, puis propose une capacité de batterie
+							en fonction de la technologie choisie (plomb, lithium, etc.), en tenant compte du taux de
+							décharge admissible en fonction de la technologie.
+						</p>
+					</div>
 
-				<div class="faq-item">
-					<h3 class="faq-question">Les résultats sont-ils fiables ?</h3>
-					<p class="faq-answer">
-						Les résultats reposent sur les informations fournies et sur des
-						hypothèses représentatives d'usages courants. Ils doivent être
-						considérés comme une aide à la décision et non comme une validation
-						technique définitive.
-					</p>
-				</div>
+					<div class="faq-item">
+						<h3 class="faq-question">Les résultats sont-ils fiables ?</h3>
+						<p class="faq-answer">
+							Les résultats reposent sur les informations fournies et sur des
+							hypothèses représentatives d'usages courants. Ils doivent être
+							considérés comme une aide à la décision et non comme une validation
+							technique définitive.
+						</p>
+					</div>
 
-				<div class="faq-item">
-					<h3 class="faq-question">Puis-je utiliser ces résultats pour acheter mon matériel ?</h3>
-					<p class="faq-answer">
-						Les résultats permettent d'obtenir des ordres de grandeur cohérents.
-						Avant un investissement important, il reste recommandé de vérifier
-						les hypothèses spécifiques à votre projet.
-					</p>
-				</div>
+					<div class="faq-item">
+						<h3 class="faq-question">Puis-je utiliser ces résultats pour acheter mon matériel ?</h3>
+						<p class="faq-answer">
+							Les résultats permettent d'obtenir des ordres de grandeur cohérents.
+							Avant un investissement important, il reste recommandé de vérifier
+							les hypothèses spécifiques à votre projet.
+						</p>
+					</div>
 
-				<div class="faq-item">
-					<h3 class="faq-question">Puis-je utiliser le simulateur pour un système off-grid fixe ?</h3>
-					<p class="faq-answer">
-						Cette première version a été conçue pour les vans aménagés.
-						Certaines estimations peuvent toutefois être pertinentes pour de
-						petits systèmes autonomes.
-					</p>
-				</div>
+					<div class="faq-item">
+						<h3 class="faq-question">Puis-je utiliser le simulateur pour un système off-grid fixe ?</h3>
+						<p class="faq-answer">
+							Cette première version a été conçue pour les vans aménagés.
+							Certaines estimations peuvent toutefois être pertinentes pour de
+							petits systèmes autonomes.
+						</p>
+					</div>
 
-				<div class="faq-item">
-					<h3 class="faq-question">Le simulateur remplace-t-il une étude électrique complète ?</h3>
-					<p class="faq-answer">
-						Non. Il s'agit d'un outil d'aide à la décision destiné à fournir une
-						première estimation cohérente et à faciliter la compréhension du
-						problème.
-					</p>
-				</div>
+					<div class="faq-item">
+						<h3 class="faq-question">Le simulateur remplace-t-il une étude électrique complète ?</h3>
+						<p class="faq-answer">
+							Non. Il s'agit d'un outil d'aide à la décision destiné à fournir une
+							première estimation cohérente et à faciliter la compréhension du
+							problème.
+						</p>
+					</div>
 
 			</section>
 		</div>
 		<footer>
-  <div class="footer-links">
-    <a href="/guides/notions-electricite.html" title="Bases de l'électricité en van aménagé">Bases de l'électricité en van aménagé</a>
-  </div>
-</footer>
+			<div class="footer-links" style="text-align: center;">
+				<a href="../index.html">Simulateur d'autonomie</a> |
+				<a href="/guides/notions-electricite.html">Bases de l'électricité en van aménagé</a> |
+				<a href="/guides/dimensionnement-electrique-van.html">Comment dimensionner un système électrique de van
+					aménagé</a>
+			</div>
+		</footer>
 
 		<!-- Footer -->
 		<!--
