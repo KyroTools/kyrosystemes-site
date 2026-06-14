@@ -4,9 +4,16 @@
 
   <url>
     <loc>https://kyrosystemes.fr/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://kyrosystemes.fr/guides/notions-electricite.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>  
+  </url>
+
 
 </urlset>
