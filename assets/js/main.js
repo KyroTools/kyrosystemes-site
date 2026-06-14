@@ -74,8 +74,13 @@
 					.each(function() {
 
 						var	$this = $(this),
-							id = $this.attr('href'),
-							$section = $(id);
+						 id = $this.attr('href');
+
+						// Ignore non-anchor links (external pages)
+						if (!id || id.charAt(0) !== '#')
+						return;
+
+						var $section = $(id);
 
 						// No section for this link? Bail.
 							if ($section.length < 1)
@@ -121,3 +126,29 @@
 		});
 
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(q => {
+
+    q.addEventListener("click", () => {
+
+      const answer = q.nextElementSibling;
+
+      const isOpen = answer.style.display === "block";
+
+      // optionnel : fermer les autres (accordéon propre)
+      document.querySelectorAll(".faq-answer").forEach(a => {
+        a.style.display = "none";
+      });
+
+      // toggle
+      answer.style.display = isOpen ? "none" : "block";
+
+    });
+
+  });
+
+});

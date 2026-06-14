@@ -3928,3 +3928,25 @@ input, select, textarea {
     padding-left: 15px;
   }
 }
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 0;
+}
+
+.faq-question {
+  cursor: pointer;
+  margin: 0;
+  font-size: 18px;
+}
+
+.faq-question:hover {
+  color: #1f4b7a;
+}
