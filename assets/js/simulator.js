@@ -364,20 +364,6 @@ function submitFeedback(event) {
     formData.append("entry.64429553", value);
   });
 
-  formData.append(
-    "entry.971859063",
-    document.getElementById("q3").value
-  );
-
-  const status =
-    document.querySelector(
-      'input[name="q4"]:checked'
-    )?.value || "";
-
-  formData.append(
-    "entry.517472067",
-    status
-  );
 
   formData.append(
     "entry.1066571812",

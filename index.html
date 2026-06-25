@@ -169,11 +169,13 @@
 						votre installation, sa capacité de résilience et les pistes à privilégier pour l'améliorer.
 						L'objectif est de fournir un ordre de grandeur réaliste et d'identifier
 						les contraintes qui influencent réellement le dimensionnement.</p>
-						<p>
-							Si vous souhaitez en savoir plus sur la méthodologie intégrée au simulateur, et sur la façon de dimensionner
-							un système électrique de van, cet article est fait pour vous: 
-							<a href="/guides/dimensionnement-electrique-van.html">Comment dimensionner un système électrique de van aménagé ?</a>
-						</p>
+					<p>
+						Si vous souhaitez en savoir plus sur la méthodologie intégrée au simulateur, et sur la façon de
+						dimensionner
+						un système électrique de van, cet article est fait pour vous:
+						<a href="/guides/dimensionnement-electrique-van.html">Comment dimensionner un système électrique
+							de van aménagé ?</a>
+					</p>
 					<h3>Ce que vous obtenez</h3>
 					<p>
 						À l'issue du calcul, vous obtenez :
@@ -385,69 +387,21 @@
 								</label>
 								<input type="text" id="feature_other_text" maxlength="100" placeholder="Préciser"
 									autocomplete="off" pattern=".{0,100}" style="display:none; margin-top:8px;">
-								<!-- <select id="q2">
-												<option value="">Choisir</option>
-												<option value="Option2">Recommandation de matériel (batterie, panneaux solaires)</option>
-												<option value="Option3">Liste de matériel complète</option>
-												<option value="Option4">Simulation hiver / été</option>
-												<option value="Option5">Estimation du coût de l'installation</option>
-												<option value="Option6">Schéma d'architecture type</option>
-												<option value="Option7">Comparaison plusieurs scénarios d'utilisation</option>
-												<option value="Option8">Autre (précisez en commentaire)</option>
-											</select> -->
+
 							</div>
 
 							<div class="feedback-field">
 								<br>
-								<label>Qu'est-ce qui vous a manqué ou semblé peu clair ?</label>
-								<textarea id="q3" maxlength="1000" placeholder="Votre retour (optionnel)"
-									autocomplete="off"></textarea>
-							</div>
-
-							<div class="feedback-field">
-								<br>
-								<label>À quel stade de votre projet êtes-vous ?</label>
-								<label>
-									<input type="radio" name="q4" value="Je commence mes recherches">
-									Je commence mes recherches
-								</label>
-								<label>
-									<input type="radio" name="q4" value="Je conçois actuellement mon installation">
-									Je conçois actuellement mon installation
-								</label>
-								<label>
-									<input type="radio" name="q4" value="Je suis en train d'acheter le matériel">
-									Je suis en train d'acheter le matériel
-								</label>
-								<label>
-									<input type="radio" name="q4" value="Mon installation est déjà réalisée">
-									Mon installation est déjà réalisée
-								</label>
-								<label>
-									<input type="radio" name="q4" value="Je suis simplement curieux">
-									Je suis simplement curieux
-								</label>
-								<!--<select id="q4">
-												<option value="">Choisir</option>
-												<option value="Option1">Je commence mes recherches</option>
-												<option value="Option2">Je conçois actuellement mon installation</option>
-												<option value="Option3">Je suis en train d'acheter le matériel</option>
-												<option value="Option4">Mon installation est déjà réalisée</option>
-												<option value="Option5">Je suis simplement curieux</option>
-												<option value="Option6">Autre (précisez en commentaire)</option>
-											</select> -->
-							</div>
-
-							<div class="feedback-field">
-								<br>
-								<label>Être informé des prochaines versions</label>
+								<label>Suivre l'évolution du projet (facultatif)</label>
 								<div class="vps-note">
-									Je développe cet outil progressivement. <br>
-									Laissez votre email si vous souhaitez être informé
-									des nouvelles fonctionnalités ou des futurs guides techniques.
-									<br>
-									Aucun démarchage. Quelques emails par an au maximum.
-									<br>
+									<p>
+										Laissez votre email si vous souhaitez être informé des nouvelles fonctionnalités
+										et futurs guides techniques.
+										<br>
+										Vous pouvez envoyer votre avis même sans renseigner votre email.
+										<br>
+										Aucun spam. Quelques messages par an au maximum.
+									</p>
 								</div>
 
 								<input type="email" id="q5" placeholder="Votre email (facultatif)" maxlength="150"
@@ -505,12 +459,13 @@
 						votre consommation quotidienne, de votre mode de voyage et des conditions d'ensoleillement.
 						Par exemple, un van consommant 500 Wh par jour n'aura pas les mêmes besoins qu'un véhicule
 						consommant 2000 Wh par jour pour le télétravail, l'eau chaude ou la cuisson électrique.
-						L'idéal est de dimensionner ses panneaux solaires pour qu'ils permettent de compenser une 
-						grande partie de la consommation électrique journalière, en complément d'un éventuel chargeur 
-						sur alternateur. Dans la pratique, vous serez aussi limité par la surface maximale de votre 
-						toit (et de ses lanterneaux), ou le budget que vous souhaitez y mettre (bien que maintenant on 
+						L'idéal est de dimensionner ses panneaux solaires pour qu'ils permettent de compenser une
+						grande partie de la consommation électrique journalière, en complément d'un éventuel chargeur
+						sur alternateur. Dans la pratique, vous serez aussi limité par la surface maximale de votre
+						toit (et de ses lanterneaux), ou le budget que vous souhaitez y mettre (bien que maintenant on
 						trouve de très bons panneaux à des prix compétitifs).
-						Le principal intéret de ce simulateur est justement de pouvoir faire varier la taille (puissance) 
+						Le principal intéret de ce simulateur est justement de pouvoir faire varier la taille
+						(puissance)
 						de vos panneaux solaires et voir comment cela influe sur la robustesse de votre installation.
 					</p>
 				</div>
@@ -518,11 +473,14 @@
 				<div class="faq-item">
 					<h3 class="faq-question">Le simulateur tient-il compte des pertes électriques ?</h3>
 					<p class="faq-answer">
-						Oui, en partie. Une installation électrique autonome n'est jamais parfaitement efficace. Chaque étape du
+						Oui, en partie. Une installation électrique autonome n'est jamais parfaitement efficace. Chaque
+						étape du
 						système introduit des pertes : recharge de la batterie, régulateur solaire, convertisseur 12 V
 						vers 230 V ou encore alimentation de certains appareils.
-						Le simulateur intègre des hypothèses sur le rendement des régulateurs solaires et des chargeurs sur alternateurs.
-						Néanmoins, il n'intègre pas encore d'hypothèse de rendement sur les convertisseurs 12V vers 220V (notamment pour les plaques
+						Le simulateur intègre des hypothèses sur le rendement des régulateurs solaires et des chargeurs
+						sur alternateurs.
+						Néanmoins, il n'intègre pas encore d'hypothèse de rendement sur les convertisseurs 12V vers 220V
+						(notamment pour les plaques
 						de cuisson). C'est une amélioration qui sera bientôt intégrée.
 					</p>
 				</div>
