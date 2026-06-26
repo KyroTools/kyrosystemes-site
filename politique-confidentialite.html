@@ -153,7 +153,60 @@
 		</section>
 
 	</div>
+<!-- Cookies banner -->
+<div id="cookieBanner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>
+      Ce site utilise des cookies pour mesurer l’audience (Google Analytics)
+      et améliorer les fonctionnalités.
+    </p>
 
+    <div class="cookie-buttons">
+      <button id="cookieAccept">Accepter</button>
+      <button id="cookieReject">Refuser</button>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const banner = document.getElementById("cookieBanner");
+  const acceptBtn = document.getElementById("cookieAccept");
+  const rejectBtn = document.getElementById("cookieReject");
+
+  const consent = localStorage.getItem("cookieConsent");
+
+  // Affichage si pas encore choisi
+  if (!consent) {
+    banner.style.display = "block";
+  }
+
+  // ACCEPTATION
+  acceptBtn.addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "accepted");
+    banner.style.display = "none";
+
+    if (typeof gtag === "function") {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+  });
+
+  // REFUS
+  rejectBtn.addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "rejected");
+    banner.style.display = "none";
+
+    if (typeof gtag === "function") {
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      });
+    }
+  });
+
+});
+</script>
 <div id="footer-container"></div>
 
 </div>
