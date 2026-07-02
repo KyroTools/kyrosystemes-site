@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXJCCGRF1M"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-EXJCCGRF1M');
+	</script>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+	<title>Architecture électrique d'un van autonome : une installation complète 100% électrique pour deux personnes
+	</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+		content="Comment dimensionner l'installation électrique d'un van aménagé ? Découvrez un exemple complet avec batterie 300 Ah, panneau solaire 420 Wc, recharge par alternateur, calculs d'autonomie et schéma électrique." />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="/assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Architecture électrique d'un van autonome : une installation complète 100% électrique pour deux
+				personnes </h1>
+			<p>Découvrez un exemple complet de dimensionnement d'une installation électrique pour un van aménagé :
+				batterie lithium 300 Ah, panneau solaire 420 Wc, recharge par alternateur et convertisseur 230 V. Cette
+				étude de cas détaille les hypothèses de conception, les calculs de consommation, l'autonomie obtenue et
+				les choix techniques retenus. Une base concrète pour comprendre comment concevoir une installation
+				fiable et adaptée à un usage réel.</p>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<button class="nav-burger" id="navBurger">
+				☰ Menu
+			</button>
+			<ul id="nav-guides">
+				<li><a href="../index.html">Simulateur d'autonomie</a></li>
+				<li class="dropdown">
+					<a href="/guides.html">Guides ▼</a>
+					<ul class="dropdown-menu">
+						<a href="/guides/notions-electricite.html" title="Bases de l'électricité en van aménagé">Bases
+							de l'électricité en van aménagé</a>
+						<a href="/guides/dimensionnement-electrique-van.html"
+							title="Comment dimensionner un système électrique de van aménagé">Comment dimensionner un
+							système électrique de van aménagé</a>
+						<a href="/guides/production-energie.html"
+							title="Comment recharger la batterie de son van">Comment recharger la batterie de son
+							van</a>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Content -->
+			<section id="content" class="main">
+				<h1>Architecture électrique d'un van autonome : une installation complète pour deux personnes </h1>
+
+				<p>
+					Concevoir un système électrique de van aménagé consiste avant tout à adapter l'installation aux
+					usages réels. Il n'existe pas d'architecture universelle : une installation dimensionnée pour un
+					couple voyageant principalement l'été n'aura pas les mêmes contraintes qu'un van destiné au
+					télétravail ou aux voyages hivernaux.
+				</p>
+
+				<p>
+					Cette étude présente une architecture complète conçue pour un couple voyageant en Europe,
+					principalement au printemps, en été et en automne. L'objectif est de disposer d'un système simple,
+					autonome et robuste, capable de fonctionner plusieurs jours sans raccordement au réseau électrique
+					tout en conservant un niveau de confort élevé
+				</p>
+
+				<p>
+					Les hypothèses de départ sont les suivantes :
+				</p>
+
+				<ul>
+					<li>deux personnes ;</li>
+					<li>voyages en Europe ;</li>
+					<li>en été, moins d'une heure de route par jour en moyenne afin de profiter des mêmes lieux
+						plusieurs jours ;</li>
+					<li>en hiver, déplacements plus fréquents, de l'ordre de 2 à 3 heures par jour.</li>
+				</ul>
+
+				<p>
+					L'installation comprend :
+				</p>
+
+				<ul>
+					<li>un chauffe-eau électrique 12 V de 6 litres (200 W) ;</li>
+					<li>un réfrigérateur à compression de 90 litres (50 W) ;</li>
+					<li>une plaque à induction limitée à 1000 W ;</li>
+					<li>un convertisseur 12 V / 230 V de 1200 W utilisé uniquement pour la plaque de cuisson et une
+						prise secteur ;</li>
+					<li>aucun chauffage électrique ;</li>
+					<li>aucun ordinateur ni système Starlink.</li>
+				</ul>
+
+				<p>
+					L'objectif n'est pas de rechercher une autonomie extrême, mais un compromis cohérent entre coût,
+					poids, simplicité et confort.
+				</p>
+
+				<h2>L'architecture retenue</h2>
+
+				<p>
+					Le système est constitué des éléments suivants :
+				</p>
+
+				<ul>
+					<li>batterie lithium-ion 300 Ah (environ 3200 Wh réellement exploitables) ;</li>
+					<li>panneau solaire monocristallin 420 Wc ;</li>
+					<li>régulateur solaire MPPT 30 A ;</li>
+					<li>chargeur DC-DC 30 A raccordé à l'alternateur ;</li>
+					<li>convertisseur 230 V de 1200 W.</li>
+				</ul>
+
+				<p>
+					Cette architecture repose sur un principe simple : en été, le solaire couvre la quasi-totalité des
+					consommations quotidiennes. En hiver, lorsque la production photovoltaïque devient insuffisante, les
+					déplacements permettent de compléter la recharge grâce à l'alternateur.
+				</p>
+
+				<p>
+					La batterie joue uniquement son rôle de réserve d'énergie entre les périodes de production et les
+					périodes de consommation.
+				</p>
+
+				<h2>Vérification du bilan énergétique</h2>
+
+				<h3>Utilisation estivale</h3>
+
+				<p>
+					Les consommations quotidiennes retenues sont les suivantes :
+				</p>
+
+				<ul>
+					<li>cuisson à induction : 30 minutes (500 Wh) ;</li>
+					<li>chauffe-eau : deux douches (200 Wh) ;</li>
+					<li>réfrigérateur : environ 300 Wh ;</li>
+					<li>éclairage, pompe à eau, recharge des téléphones : 100 Wh.</li>
+				</ul>
+
+				<p>
+					La consommation totale atteint donc environ <strong>1200 Wh par jour</strong>.
+					En parallèle, le panneau solaire de <strong>420 Wc</strong> produit au minimum l'équivalent de six
+					heures à 300 W, soit environ <strong>1500 Wh par jour</strong> après prise en compte du rendement du
+					MPPT.
+				</p>
+
+				<p>
+					Le bilan énergétique reste positif. La batterie se recharge progressivement chaque jour, même avec
+					très peu de roulage.
+					Cette configuration permet donc de rester plusieurs jours au même endroit en été sans dépendre de
+					l'alternateur.
+				</p>
+
+				<h3>Utilisation hivernale</h3>
+
+				<p>
+					Les besoins évoluent sensiblement :
+				</p>
+
+				<ul>
+					<li>cuisson : une heure (900 Wh) ;</li>
+					<li>chauffe-eau : deux douches plus chaudes (300 Wh) ;</li>
+					<li>réfrigérateur : environ 200 Wh ;</li>
+					<li>autres usages (éclairage, pompe à eau, recharge des téléphones) : 100 Wh.</li>
+				</ul>
+
+				<p>
+					La consommation atteint alors environ <strong>1600 Wh par jour</strong>.
+					Dans le même temps, la production solaire chute fortement. Une hypothèse prudente consiste à retenir
+					environ six heures à 100 W, soit <strong>500 Wh produits par jour</strong> (rendement MPPT à 85%).
+				</p>
+
+				<p>
+					La batterie fournit donc chaque jour environ <strong>1000 Wh</strong> supplémentaires.
+					Avec une capacité utile d'environ <strong>3200 Wh</strong>, le véhicule dispose d'environ
+					<strong>trois jours d'autonomie</strong> en restant totalement stationnaire.
+				</p>
+
+				<p>
+					En pratique, ce scénario est rarement rencontré. Les voyages hivernaux s'accompagnent généralement
+					de déplacements plus fréquents, ce qui permet de recharger la batterie grâce au chargeur DC-DC.
+					Avec un chargeur de <strong>30 A</strong>, il faut environ <strong>trois heures de route par
+						jour</strong> pour compenser les besoins énergétiques hivernaux.
+					L'installation retrouve ainsi son équilibre sans nécessiter de panneaux solaires supplémentaires.
+				</p>
+
+				<p> Les valeurs retenues dans cette étude de cas correspondent à un profil d'utilisation précis et
+					reposent sur des hypothèses de consommation et de production réalistes. Si vous souhaitez comprendre
+					en détail la méthode utilisée pour estimer les besoins énergétiques, dimensionner la batterie et
+					calculer la puissance des panneaux solaires, consultez notre article consacré au <a
+						href="/guides/dimensionnement-electrique-van.html">dimensionnement du système électrique d'un
+						van aménagé</a>. </p>
+
+				<h2>Pourquoi cette architecture fonctionne</h2>
+
+				<p>
+					Cette configuration illustre un principe fondamental du dimensionnement énergétique : il n'est pas
+					nécessaire que chaque source de recharge couvre tous les usages à elle seule.
+					Le panneau solaire est optimisé pour l'utilisation estivale, lorsque le véhicule reste plusieurs
+					jours au même endroit. L'alternateur prend naturellement le relais pendant les voyages hivernaux, où
+					les déplacements sont plus fréquents. La batterie assure la continuité entre ces deux modes de
+					fonctionnement.
+				</p>
+
+				<p>
+					Cette répartition des rôles permet d'obtenir une installation relativement simple tout en limitant
+					le coût, le poids embarqué et la surface occupée par les panneaux solaires.
+				</p>
+
+				<h2>Cette architecture est-elle adaptée à votre projet&nbsp;?</h2>
+
+				<p>
+					Cette étude correspond à une architecture de référence construite autour d’un profil d’usage courant
+					: voyage à deux, alternance entre stationnaire en été et déplacements plus fréquents en mi-saison et
+					en hiver, avec des consommations électriques significatives (cuisson, chauffe-eau, réfrigérateur).
+				</p>
+
+				<p>
+					Selon votre mode de voyage, certains paramètres peuvent naturellement évoluer : niveau de
+					consommation, durée de stationnement, fréquence de roulage ou saisonnalité d’utilisation. L’intérêt
+					de cette architecture est justement de servir de base de conception que vous pouvez ajuster à votre
+					propre contexte.
+				</p>
+
+				<p>
+					Si vos besoins sont plus faibles, une batterie de capacité inférieure ou une puissance solaire
+					réduite peuvent suffire. À l’inverse, des usages plus intensifs (télétravail, hiver prolongé,
+					équipements supplémentaires) nécessiteront des ajustements sur la production et le stockage.
+				</p>
+
+				<p>
+					Pour affiner ces ordres de grandeur, vous pouvez utiliser <a href="/index.html#simulateur">
+						le simulateur de dimensionnement de Kyro Systèmes </a> afin d’estimer les besoins adaptés à
+					votre utilisation réelle avant de choisir votre matériel.
+				</p>
+
+
+
+
+				<h2>Télécharger le dossier technique complet</h2>
+
+				<p>
+					Cet article présente les principes de dimensionnement et les principaux calculs ayant conduit à
+					cette architecture. Il permet de comprendre la logique de conception, mais ne détaille pas
+					l'ensemble des composants nécessaires à sa réalisation.
+				</p>
+
+				<p>
+					Le dossier technique complet associé (9,99 €) contient :
+				</p>
+
+				<ul>
+					<li>le schéma électrique complet de l'installation ;</li>
+					<li>les références du matériel retenu ;</li>
+					<li>le budget estimatif de l'installation ;</li>
+					<li>les principales hypothèses de conception ;</li>
+					<li>le rôle de chaque composant dans l'architecture ;</li>
+					<li>les raisons qui ont conduit à leur sélection ;</li>
+					<li>les principales possibilités d'évolution de l'installation (augmentation de la capacité
+						batterie, ajout de panneaux solaires, évolution des moyens de recharge, etc.).</li>
+				</ul>
+
+				<p>
+					L'objectif n'est pas de fournir une simple liste de matériel, mais une architecture cohérente,
+					documentée et directement exploitable comme base de conception.
+					Pour la plupart des aménageurs, ce dossier permet d'éviter plusieurs dizaines d'heures de recherche
+					pour comparer les composants, comprendre leur rôle, vérifier leur compatibilité et construire une
+					installation équilibrée.
+				</p>
+
+				<div style="text-align:center; margin: 30px 0;">
+					<a href="https://kyrotools.gumroad.com/l/kyrosystemes-van-electrique-300ah" target="_blank" onclick="gtag('event', 'click_dossier_architecture', {
+       'event_category': 'engagement',
+       'event_label': 'architecture_van_300ah'
+     });" style="display:inline-block;padding:12px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">
+						Accéder au dossier technique complet (9,90 €)
+					</a>
+				</div>
+
+				<p>
+					Si votre projet diffère de cette configuration, vous pouvez également utiliser le simulateur de
+					dimensionnement de Kyro Systèmes afin d'ajuster la batterie, la puissance solaire et les moyens de
+					recharge adaptés à vos propres usages, puis utiliser ce dossier comme exemple d'architecture de
+					référence.
+				</p>
+
+
+
+			</section>
+
+		</div>
+		<!-- Cookies banner -->
+		<div id="cookieBanner" class="cookie-banner">
+			<div class="cookie-content">
+				<p>
+					Ce site utilise des cookies pour mesurer l’audience (Google Analytics)
+					et améliorer les fonctionnalités.
+				</p>
+
+				<div class="cookie-buttons">
+					<button id="cookieAccept">Accepter</button>
+					<button id="cookieReject">Refuser</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+
+				const banner = document.getElementById("cookieBanner");
+				const acceptBtn = document.getElementById("cookieAccept");
+				const rejectBtn = document.getElementById("cookieReject");
+
+				const consent = localStorage.getItem("cookieConsent");
+
+				// Affichage si pas encore choisi
+				if (!consent) {
+					banner.style.display = "block";
+				}
+
+				// ACCEPTATION
+				acceptBtn.addEventListener("click", function () {
+					localStorage.setItem("cookieConsent", "accepted");
+					banner.style.display = "none";
+
+					if (typeof gtag === "function") {
+						gtag('consent', 'update', {
+							'analytics_storage': 'granted'
+						});
+					}
+				});
+
+				// REFUS
+				rejectBtn.addEventListener("click", function () {
+					localStorage.setItem("cookieConsent", "rejected");
+					banner.style.display = "none";
+
+					if (typeof gtag === "function") {
+						gtag('consent', 'update', {
+							'analytics_storage': 'denied'
+						});
+					}
+				});
+
+			});
+		</script>
+		<div id="footer-container"></div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
