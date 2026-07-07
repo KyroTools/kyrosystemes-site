@@ -1,41 +1,77 @@
 // ------------------------------------------------------
-// Google Analytics (désactivé en environnement local)
+// Google Analytics 4
+// Désactivé en environnement local
+// Gestion du consentement cookies (RGPD)
 // ------------------------------------------------------
 
 (function () {
 
+    // Désactivation en local
+    const hostname = window.location.hostname;
+
     const isLocal =
-        location.hostname === "localhost" ||
-        location.hostname === "127.0.0.1";
+        hostname === "localhost" ||
+        hostname === "127.0.0.1" ||
+        hostname === "";
 
     if (isLocal) {
-        console.log("Mode local : Google Analytics désactivé.");
+        console.log("Google Analytics désactivé en environnement local.");
         return;
     }
 
-    // Création de dataLayer
+
+    // --------------------------------------------------
+    // Initialisation Google Consent Mode
+    // --------------------------------------------------
+
     window.dataLayer = window.dataLayer || [];
 
-    window.gtag = function () {
+    function gtag() {
         dataLayer.push(arguments);
-    };
+    }
 
-    // Consentement par défaut
+    window.gtag = gtag;
+
+
+    // Consentement par défaut :
+    // aucune collecte avant acceptation utilisateur
     gtag("consent", "default", {
-        analytics_storage: "denied"
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        wait_for_update: 500
     });
 
+
+    // --------------------------------------------------
     // Chargement de Google Analytics
+    // --------------------------------------------------
+
     const script = document.createElement("script");
+
     script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-EXJCCGRF1M";
+    script.src =
+        "https://www.googletagmanager.com/gtag/js?id=G-EXJCCGRF1M";
+
     document.head.appendChild(script);
 
-    // Initialisation
+
+    // --------------------------------------------------
+    // Configuration GA4
+    // --------------------------------------------------
+
     gtag("js", new Date());
 
     gtag("config", "G-EXJCCGRF1M", {
-        anonymize_ip: true
+
+        // anonymisation IP
+        anonymize_ip: true,
+
+        // évite d'envoyer des données avant consentement
+        send_page_view: true
+
     });
+
+
+    console.log("Google Analytics initialisé.");
 
 })();
