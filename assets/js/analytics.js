@@ -37,8 +37,7 @@
     // aucune collecte avant acceptation utilisateur
     const consent = localStorage.getItem("cookieConsent");
     gtag("consent", "default", {
-        analytics_storage: consent === "accepted" ? "granted" : "denied",
-        ad_storage: consent === "accepted" ? "granted" : "denied"
+        analytics_storage: consent === "accepted" ? "granted" : "denied"
     });
 
 
