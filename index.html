@@ -8,25 +8,7 @@
 
 <head>
 	<!-- Google tag (gtag.js) -->
-	<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-
-// consent par défaut AVANT chargement GA
-gtag('consent', 'default', {
-  'analytics_storage': 'denied'
-});
-</script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXJCCGRF1M"></script>
-
-<script>
-gtag('js', new Date());
-
-gtag('config', 'G-EXJCCGRF1M', {
-  anonymize_ip: true
-});
-</script>
+<script src="/assets/js/analytics.js"></script>
 
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -63,32 +45,15 @@ gtag('config', 'G-EXJCCGRF1M', {
 				avant d'investir dans du matériel coûteux.</p>
 		</header>
 		<!-- Nav -->
-		<nav id="nav">
-			<button class="nav-burger" id="navBurger">
-				☰ Menu
-			</button>
-			<ul>
-				<li><a href="#intro" class="active">Introduction</a></li>
-				<li><a href="#enjeux">Enjeux du dimensionnement</a></li>
-				<li><a href="#presentation-simulateur">La méthode</a></li>
-				<li><a href="#simulateur">Simulez!</a></li>
-				<li><a href="#faq">FAQ</a></li>
-			</ul>
-			<ul id="nav-guides">
-				<li class="dropdown">
-					<a href="/guides.html">Guides ▼</a>
-					<ul class="dropdown-menu">
-						<a href="/guides/notions-electricite.html" title="Bases de l'électricité en van aménagé">Bases
-							de l'électricité en van aménagé</a>
-						<a href="/guides/dimensionnement-electrique-van.html"
-							title="Comment dimensionner un système électrique de van aménagé">Comment dimensionner un
-							système électrique de van aménagé</a>
-						<a href="/guides/production-energie.html"
-							title="Comment recharger la batterie de son van">Comment recharger la batterie de son
-							van</a>
-					</ul>
-				</li>
-			</ul>
+		 <nav id="nav">
+		 <ul id="nav-sections">
+        <li><a href="#intro" class="active">Introduction</a></li>
+        <li><a href="#enjeux">Enjeux du dimensionnement</a></li>
+        <li><a href="#presentation-simulateur">La méthode</a></li>
+        <li><a href="#simulateur">Simulez !</a></li>
+        <li><a href="#faq">FAQ</a></li>
+    	</ul>
+		<div id="nav-container"></div>
 		</nav>
 
 		<!-- Main -->
@@ -425,9 +390,9 @@ gtag('config', 'G-EXJCCGRF1M', {
 								Envoyer mon retour
 							</button>
 							<div class="vps-note">
-  Ce formulaire envoie vos réponses vers un formulaire Google Forms sécurisé.
-  Le traitement est effectué uniquement à des fins d’amélioration du service.
-</div>
+								Ce formulaire envoie vos réponses vers un formulaire Google Forms sécurisé.
+								Le traitement est effectué uniquement à des fins d’amélioration du service.
+							</div>
 
 						</form>
 					</div>
@@ -586,59 +551,59 @@ gtag('config', 'G-EXJCCGRF1M', {
 			</section>
 		</div>
 		<!-- Cookies banner -->
-<div id="cookieBanner" class="cookie-banner">
-  <div class="cookie-content">
-    <p>
-      Ce site utilise des cookies pour mesurer l’audience (Google Analytics)
-      et améliorer les fonctionnalités.
-    </p>
+		<div id="cookieBanner" class="cookie-banner">
+			<div class="cookie-content">
+				<p>
+					Ce site utilise des cookies pour mesurer l’audience (Google Analytics)
+					et améliorer les fonctionnalités.
+				</p>
 
-    <div class="cookie-buttons">
-      <button id="cookieAccept">Accepter</button>
-      <button id="cookieReject">Refuser</button>
-    </div>
-  </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+				<div class="cookie-buttons">
+					<button id="cookieAccept">Accepter</button>
+					<button id="cookieReject">Refuser</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
 
-  const banner = document.getElementById("cookieBanner");
-  const acceptBtn = document.getElementById("cookieAccept");
-  const rejectBtn = document.getElementById("cookieReject");
+				const banner = document.getElementById("cookieBanner");
+				const acceptBtn = document.getElementById("cookieAccept");
+				const rejectBtn = document.getElementById("cookieReject");
 
-  const consent = localStorage.getItem("cookieConsent");
+				const consent = localStorage.getItem("cookieConsent");
 
-  // Affichage si pas encore choisi
-  if (!consent) {
-    banner.style.display = "block";
-  }
+				// Affichage si pas encore choisi
+				if (!consent) {
+					banner.style.display = "block";
+				}
 
-  // ACCEPTATION
-  acceptBtn.addEventListener("click", function () {
-    localStorage.setItem("cookieConsent", "accepted");
-    banner.style.display = "none";
+				// ACCEPTATION
+				acceptBtn.addEventListener("click", function () {
+					localStorage.setItem("cookieConsent", "accepted");
+					banner.style.display = "none";
 
-    if (typeof gtag === "function") {
-      gtag('consent', 'update', {
-        'analytics_storage': 'granted'
-      });
-    }
-  });
+					if (typeof gtag === "function") {
+						gtag('consent', 'update', {
+							'analytics_storage': 'granted'
+						});
+					}
+				});
 
-  // REFUS
-  rejectBtn.addEventListener("click", function () {
-    localStorage.setItem("cookieConsent", "rejected");
-    banner.style.display = "none";
+				// REFUS
+				rejectBtn.addEventListener("click", function () {
+					localStorage.setItem("cookieConsent", "rejected");
+					banner.style.display = "none";
 
-    if (typeof gtag === "function") {
-      gtag('consent', 'update', {
-        'analytics_storage': 'denied'
-      });
-    }
-  });
+					if (typeof gtag === "function") {
+						gtag('consent', 'update', {
+							'analytics_storage': 'denied'
+						});
+					}
+				});
 
-});
-</script>
+			});
+		</script>
 		<div id="footer-container"></div>
 	</div>
 
@@ -648,8 +613,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/layout.js"></script>
+	<script>
+initLayout();
+</script>
 	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="/assets/js/main.js"></script>
 	<script src="assets/js/simulator.js"></script>
 </body>
 

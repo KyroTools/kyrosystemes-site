@@ -585,6 +585,7 @@
 	};
 
 })(jQuery);
+/*
 document.addEventListener("DOMContentLoaded", () => {
 
   const nav = document.getElementById("nav");
@@ -594,4 +595,4 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle("open");
   });
 
-});
+}); */

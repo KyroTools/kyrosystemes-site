@@ -3,15 +3,7 @@
 <html>
 
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXJCCGRF1M"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-EXJCCGRF1M');
-	</script>
+<script src="/assets/js/analytics.js"></script>
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -46,7 +38,10 @@
 			</p>
 
 		</header>
+		<nav id="nav">
 
+			<div id="nav-container"></div>
+		</nav>
 		<div id="main">
 
 			<section id="content" class="main">
@@ -186,6 +181,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	<script src="/assets/js/browser.min.js"></script>
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/layout.js"></script>
+	<script>
+initLayout();
+</script>
 	<script src="/assets/js/main.js"></script>
 
 

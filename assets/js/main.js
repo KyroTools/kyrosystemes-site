@@ -152,25 +152,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-document.addEventListener("DOMContentLoaded", () => {
 
-  const btn = document.getElementById("navToggle");
-  const nav = document.getElementById("nav");
-
-  btn.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
-
-});
-
-fetch('/includes/footer.html')
-
-    .then(response => response.text())
-
-    .then(data => {
-
-        document.getElementById(
-            'footer-container'
-        ).innerHTML = data;
-
-    });

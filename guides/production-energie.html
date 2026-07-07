@@ -3,14 +3,7 @@
 
 <head>
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXJCCGRF1M"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-EXJCCGRF1M');
-	</script>
+<script src="/assets/js/analytics.js"></script>
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -44,24 +37,8 @@
 
 		<!-- Nav -->
 		<nav id="nav">
-			<button class="nav-burger" id="navBurger">
-				☰ Menu
-			</button>
-			<ul id="nav-guides">
-				<li><a href="../index.html">Simulateur d'autonomie</a></li>
-				<li class="dropdown">
-					<a href="/guides.html">Guides ▼</a>
-					<ul class="dropdown-menu">
-						<a href="/guides/notions-electricite.html" title="Bases de l'électricité en van aménagé">Bases
-							de l'électricité en van aménagé</a>
-						<a href="/guides/dimensionnement-electrique-van.html"
-							title="Comment dimensionner un système électrique de van aménagé">Comment dimensionner un
-							système électrique de van aménagé</a>
-						<a href="/guides/production-energie.html"
-							title="Comment recharger la batterie de son van">Comment recharger la batterie de son van</a>
-					</ul>
-				</li>
-			</ul>
+
+			<div id="nav-container"></div>
 		</nav>
 		<!-- Main -->
 		<div id="main">
@@ -1020,6 +997,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	<script src="/assets/js/browser.min.js"></script>
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/layout.js"></script>
+	<script>
+initLayout();
+</script>
 	<script src="/assets/js/main.js"></script>
 
 </body>
