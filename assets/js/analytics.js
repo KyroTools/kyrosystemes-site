@@ -64,10 +64,6 @@
 
         // anonymisation IP
         anonymize_ip: true,
-
-        // évite d'envoyer des données avant consentement
-        send_page_view: true
-
     });
 
 
