@@ -3383,11 +3383,35 @@ input, select, textarea {
 		#main input[type="reset"],
 		#main input[type="button"],
 		#main button,
-		#main .button {
-			background-color: transparent;
-			box-shadow: inset 0 0 0 1px #dddddd;
-			color: #636363 !important;
-		}
+			#main .button {
+				position: relative; /* Pour positionner le pseudo-élément */
+				background-color: transparent;
+				color: #636363 !important;
+				border: none; /* On supprime la bordure par défaut */
+				border-radius: 8px; /* Coins arrondis du bouton */
+				padding: 10px 20px; /* Espacement interne */
+				display: inline-flex; /* Permet un alignement facile du texte */
+				align-items: center; /* Centre le texte verticalement */
+				justify-content: center; /* Centre le texte horizontalement */
+				overflow: hidden; /* Masque les débordements du pseudo-élément */
+				z-index: 1; /* Assure que le texte reste au-dessus du pseudo-élément */
+				line-height: 1; /* Évite les problèmes de hauteur de ligne */
+			}
+
+			#main .button::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				border-radius: 8px; /* Mêmes coins arrondis que le bouton */
+				padding: 1px; /* Épaisseur de la bordure */
+				background: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+				-webkit-mask:
+					linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+				z-index: -1; /* Place le dégradé derrière le texte */
+			}
 
 			#main input[type="submit"]:hover,
 			#main input[type="reset"]:hover,
@@ -4073,4 +4097,14 @@ input, select, textarea {
 #cookieReject {
   background: #d9534f;
   color: white;
+}
+
+.button-disclaimer {
+    font-size: 0.8em; /* Taille réduite */
+    color: #888888; /* Couleur discrète mais lisible */
+    font-style: italic; /* Texte en italique */
+    text-align: center; /* Alignement centré pour équilibrer le design */
+    margin-top: 8px; /* Espacement entre le bouton et la phrase */
+    line-height: 1.4; /* Espacement entre les lignes */
+    font-weight: 400; /* Poids léger pour un ton rassurant */
 }

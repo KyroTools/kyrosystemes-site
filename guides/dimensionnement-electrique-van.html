@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<script src="/assets/js/analytics.js"></script>
+	<script src="/assets/js/analytics.js"></script>
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -48,7 +48,10 @@
 					Lorsqu'on cherche à dimensionner le système électrique d'un van aménagé, la première erreur consiste
 					souvent à se demander quelle batterie acheter ou combien de panneaux solaires installer.
 					En réalité, ces composants ne sont que les conséquences d'un raisonnement plus fondamental :
-					l'équilibre entre l'énergie consommée et l'énergie produite.
+					l'équilibre entre l'énergie consommée et l'énergie produite. Pour comprendre les notions d'énergie,
+					de puissance, de tension et de courant utilisées dans cette méthode, vous pouvez commencer par
+					consulter <a href="/guides/notions-electricite.html">notre guide sur les bases de l'électricité en
+						van aménagé</a>.
 				</p>
 
 				<p>
@@ -119,11 +122,18 @@
 					structurants que les appareils les plus puissants.
 					Un ordinateur de 60 W utilisé trois heures par jour représente moins d'énergie qu'un réfrigérateur
 					de 40 W fonctionnant presque en continu.
-				</p>
-
-				<p>
 					C'est précisément pour cette raison qu'il est préférable de raisonner en énergie quotidienne plutôt
 					qu'en puissance instantanée.
+				</p>
+				<p>
+					Vous souhaitez appliquer cette méthode à votre propre projet ? Utilisez gratuitement notre
+					simulateur
+					pour obtenir un premier ordre de grandeur de batterie et de production solaire.
+				<ul class="actions">
+					<li><a href="#simulateur" class="button">Estimer mon installation électrique</a>
+						<p class="button-disclaimer">Gratuit - moins de 2 minutes - sans inscription</p>
+					</li>
+				</ul>
 				</p>
 
 				<h3>Identifier les appareils réellement utilisés</h3>
@@ -239,6 +249,12 @@
 					fonctionnalité peut représenter une complexité supplémentaire dont les bénéfices resteront limités.
 					À l'inverse, pour un usage mixte entre autonomie et camping, la recharge secteur peut constituer un
 					moyen simple de sécuriser l'approvisionnement énergétique.
+				</p>
+
+				<p>
+					Pour aller plus loin, notre guide dédié explique plus en détail
+					<a href="/guides/production-energie.html">comment comparer solaire, alternateur et recharge
+						secteur.</a>
 				</p>
 
 				<h2>Étape 3 : comparer production et consommation</h2>
@@ -439,8 +455,110 @@
 
 				<p>
 					Ces principes constituent la base du raisonnement utilisé dans
-					<a href="../index.html#simulateur">notre outil de dimensionnement d'un système électrique autonome.
-					</a>
+					<a href="/index.html">notre outil de dimensionnement d'un système électrique autonome</a>, et peuvent être résumé dans le tableau ci dessous.
+				</p>
+
+
+				<table>
+					<thead>
+						<tr>
+							<th>Étape</th>
+							<th>Objectif</th>
+							<th>Question à se poser</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>
+								<strong>1. Estimer les consommations quotidiennes</strong>
+							</td>
+							<td>
+								Déterminer l'énergie consommée chaque jour par les équipements
+								du véhicule, en wattheures (Wh/j).
+							</td>
+							<td>
+								Quelle quantité d'énergie mon van consomme-t-il réellement chaque jour ?
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<strong>2. Identifier les sources de recharge</strong>
+							</td>
+							<td>
+								Évaluer les moyens disponibles pour produire ou apporter de l'énergie :
+								solaire, alternateur, prise secteur.
+							</td>
+							<td>
+								Comment vais-je recharger ma batterie pendant mes voyages ?
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<strong>3. Comparer production et consommation</strong>
+							</td>
+							<td>
+								Vérifier que les apports énergétiques moyens permettent de couvrir
+								les besoins du véhicule dans les conditions prévues.
+							</td>
+							<td>
+								Mon système produit-il suffisamment d'énergie sur la durée ?
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<strong>4. Définir l'autonomie souhaitée</strong>
+							</td>
+							<td>
+								Déterminer combien de temps le véhicule doit fonctionner sans
+								recharge significative.
+							</td>
+							<td>
+								Combien de jours dois-je pouvoir fonctionner sans soleil ni roulage ?
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<strong>5. Dimensionner la batterie</strong>
+							</td>
+							<td>
+								Calculer la capacité de stockage nécessaire en fonction de la
+								consommation quotidienne et de l'autonomie recherchée.
+							</td>
+							<td>
+								Quelle capacité de batterie permet de couvrir mes besoins réels ?
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<strong>6. Vérifier la puissance instantanée</strong>
+							</td>
+							<td>
+								S'assurer que la batterie, les câbles et les convertisseurs peuvent
+								alimenter les appareils les plus puissants.
+							</td>
+							<td>
+								Mon installation peut-elle fournir la puissance nécessaire lors des pics de consommation
+								?
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>
+					Cette méthode permet d'éviter l'erreur la plus fréquente :
+					choisir les composants avant d'avoir compris les besoins énergétiques réels
+					du véhicule.
+				</p>
+				<p>
+					Pour voir comment cette méthode se traduit dans une installation réelle, découvrez
+					<a href="/architectures/van-autonome-full-electrique.html">notre exemple complet d'architecture
+						électrique pour un van de deux personnes voyageant toute l'année</a>.
 				</p>
 			</section>
 
@@ -511,8 +629,8 @@
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/layout.js"></script>
 	<script>
-initLayout();
-</script>
+		initLayout();
+	</script>
 	<script src="/assets/js/main.js"></script>
 
 
